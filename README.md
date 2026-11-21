@@ -1,6 +1,6 @@
 # Phase Portrait Lab
 
-最近在学常微分方程。算出特征值之后，我想看看解的轨迹到底长什么样，就用 Python 画了几张相图。里面有稳定结点、鞍点、稳定焦点和中心，也可以换成自己的矩阵，看看图会怎么变。
+最近在学常微分方程，就用 Python 画了下面这几张相图。
 
 ![Four phase portraits showing a stable node, a saddle, a stable spiral, and a center](examples/phase-portraits.png)
 
@@ -42,7 +42,5 @@ The arrows show the direction of $A\mathbf{z}$ and have equal lengths. The open 
 The labels use a relative tolerance of `1e-9` after dividing the matrix by its largest absolute entry. For a custom system near a stability boundary, check its eigenvalues analytically. The plot is a finite-time numerical illustration. The visible window is $[-3,3]^2$, and `--duration` controls the integration interval. To keep the calculation bounded, the script requires the duration times the largest absolute matrix entry to be at most 40.
 
 ## 中文说明
-
-这是一个用 Python 学习二维线性常微分方程 $\mathbf{z}'=A\mathbf{z}$ 的小项目。每幅图将特征值、方向场与数值轨迹放在一起，方便对照课上学到的稳定结点、鞍点、稳定焦点和中心。
 
 运行上面的安装命令后，直接执行 `python phase_portrait.py` 就能生成四种相图。可以把自定义示例中的两个 `-0.35` 同时改成 `0`，观察稳定焦点如何变为中心，再把它们改成 `0.35`，观察轨迹如何向外旋转。

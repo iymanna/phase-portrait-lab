@@ -1,6 +1,6 @@
 # Phase Portrait Lab
 
-Explore how the eigenvalues of a 2 × 2 matrix shape the trajectories of a linear differential equation. The Python script draws the direction field and approximates forward trajectories using fourth-order Runge–Kutta (RK4).
+最近在学常微分方程。算出特征值之后，我想看看解的轨迹到底长什么样，就用 Python 画了几张相图。里面有稳定结点、鞍点、稳定焦点和中心，也可以换成自己的矩阵，看看图会怎么变。
 
 ![Four phase portraits showing a stable node, a saddle, a stable spiral, and a center](examples/phase-portraits.png)
 
@@ -27,6 +27,8 @@ python phase_portrait.py --matrix -0.35 -1.15 1.15 -0.35 --output outputs/custom
 The custom example represents $x'=-0.35x-1.15y$ and $y'=1.15x-0.35y$. Run `python phase_portrait.py --help` for the other options.
 
 ## Reading the plots
+
+The script uses fourth-order Runge–Kutta (RK4) to approximate forward trajectories.
 
 | Preset | Eigenvalues | What the trajectories do |
 | --- | --- | --- |
